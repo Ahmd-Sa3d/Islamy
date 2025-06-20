@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islamy/UI/screens/home_screen.dart';
+import 'package:islamy/UI/screens/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,10 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false,
-      initialRoute: '/home_screens',
+      initialRoute: '/splash_screen',
 
       routes: {
     '/home_screens': (_)=>HomeScreen(),
+    '/splash_screen': (_)=>SplashScreen(),
       },
     );
   }
