@@ -1,0 +1,11 @@
+flutter_native_splash:
+  color: "#202020"
+  image: assets/icons/mosque_Splash_icon.png
+  branding: assets/icons/splash_branding.png
+
+  android_12:
+    image: assets/icons/mosque_Splash_icon.png
+    color: "#202020"
+    branding: assets/icons/splash_branding.png
+    android: true
+    ios: true
