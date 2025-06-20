@@ -8,6 +8,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Placeholder();
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [Image.asset('assets/images/download.png')],
+    );
   }
 }
