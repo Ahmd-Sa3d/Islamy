@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamy/UI/app_utils/app_images.dart';
-import 'package:islamy/UI/screens/home_screen.dart';
+import 'package:islamy/UI/screens/on_bording_screens/on_boarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,7 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> _initialize() async {
     await Future.delayed( Duration(seconds: 2));
-    Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+    // ignore: use_build_context_synchronously
+    Navigator.pushReplacementNamed(context, OnBoardingScreen.routeName);
   }
 
   @override

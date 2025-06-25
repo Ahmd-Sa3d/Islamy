@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islamy/UI/screens/home_screen.dart';
+import 'package:islamy/UI/screens/on_bording_screens/on_boarding_screen.dart';
 import 'package:islamy/UI/screens/splash_screen.dart';
 
 void main() {
@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
     '/home_screens': (_)=>HomeScreen(),
     '/splash_screen': (_)=>SplashScreen(),
+    '/intro_screen': (_)=>OnBoardingScreen(),
       },
     );
   }
