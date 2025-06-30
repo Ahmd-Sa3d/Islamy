@@ -1,13 +1,13 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:islamy/UI/app_utils/Appfonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:islamy/UI/app_utils/app_fonts.dart';
 import 'package:islamy/UI/app_utils/app_color.dart';
 import 'package:islamy/UI/app_utils/app_images.dart';
 import 'package:islamy/UI/screens/on_bording_screens/on_boarding_data.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   static final String routeName = '/intro_screen';
-
   const OnBoardingScreen({super.key});
 
   @override
@@ -15,7 +15,7 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
-  PageController controller = PageController(initialPage: 0);
+   late PageController controller;
   int currentPage = 0;
   int totalPage = OnBoardingData.introData.length;
 bool isVisible = true;
@@ -28,6 +28,7 @@ bool isVisible = true;
   @override
   void initState() {
     super.initState();
+    controller = PageController(initialPage: 0);
     controller.addListener(_onPageChanged);
   }
 
@@ -53,8 +54,8 @@ bool isVisible = true;
                     children: [
                       Padding(
                         padding: EdgeInsets.symmetric(
-                          horizontal: 16.0,
-                          vertical: 20,
+                          horizontal: 16.0.w,
+                          vertical: 20.h,
                         ),
                         child: Image.asset(introItems.image),
                       ),
