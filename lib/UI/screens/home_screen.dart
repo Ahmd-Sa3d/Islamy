@@ -25,8 +25,12 @@ class _HomeScreenState extends State<HomeScreen> {
     AppImages.radioBgImage,
     AppImages.timeBgImage,
   ];
-  List <Widget> tabsList =[
-    QuranTab(),HadithTab(),SebhaTab(),RadioTab(),TimeTab()
+  List<Widget> tabsList = [
+    QuranTab(),
+    HadithTab(),
+    SebhaTab(),
+    RadioTab(),
+    TimeTab(),
   ];
   int selectedIndex = 0;
 
@@ -52,7 +56,14 @@ class _HomeScreenState extends State<HomeScreen> {
             currentIndex: selectedIndex,
             onTabChange: _onTabChange,
           ),
-          body: tabsList[selectedIndex],
+          body: SafeArea(
+            child: Column(
+              children: [
+                Image.asset(AppImages.onBoardingMosque),
+                tabsList[selectedIndex],
+              ],
+            ),
+          ),
           backgroundColor: AppColor.transParent,
         ),
       ],

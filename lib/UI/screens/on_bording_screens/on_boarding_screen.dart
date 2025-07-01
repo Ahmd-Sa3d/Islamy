@@ -39,7 +39,7 @@ bool isVisible = true;
       body: SafeArea(
         child: Column(
           children: [
-            Center(child: Image.asset(AppImages.islamyOnBoarding)),
+            Center(child: Image.asset(AppImages.onBoardingMosque)),
             Expanded(
               child: PageView.builder(
                 onPageChanged: (index) {
@@ -61,14 +61,14 @@ bool isVisible = true;
                       ),
                       Text(
                         introItems.title,
-                        style: AppFont.amiri.copyWith(fontSize: 24),
+                        style: AppFont.amiri20GoldF700.copyWith(fontSize: 24),
                       ),
                       SizedBox(height: 40),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 16.0),
                         child: Text(
                           introItems.description ?? '',
-                          style: AppFont.amiri,
+                          style: AppFont.amiri20GoldF700,
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -96,7 +96,7 @@ bool isVisible = true;
                       },
                       child: Text(
                         'Previous',
-                        style: AppFont.amiri.copyWith(fontSize: 16),
+                        style: AppFont.amiri20GoldF700.copyWith(fontSize: 16),
                       ),
                     ),
                   ),
@@ -116,7 +116,7 @@ bool isVisible = true;
                     },
                     child: Text(
                       currentPage == totalPage - 1 ? 'Finish' : 'Next',
-                      style: AppFont.amiri.copyWith(fontSize: 16),
+                      style: AppFont.amiri20GoldF700.copyWith(fontSize: 16),
                     ),
                   ),
                 ],
