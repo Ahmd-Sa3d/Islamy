@@ -6,4 +6,6 @@ class AppIcons{
   static const String sebhaIcon="assets/icons/sbha_icon.png";
   static const String radioIcon="assets/icons/radio_icon.png";
   static const String timeIcon="assets/icons/time_icon.png";
+  static const String quranSuffixIcon="assets/icons/quran_Suffix_icon.png";
+  static const String vectorSuraNumber="assets/icons/vector_sura_number.png";
 }

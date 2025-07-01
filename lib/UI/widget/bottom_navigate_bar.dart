@@ -20,60 +20,57 @@ class BottomNavigateBar extends StatefulWidget {
 class _BottomNavigateBarState extends State<BottomNavigateBar> {
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: Theme.of(context).copyWith(canvasColor: AppColor.gold),
-      child: BottomNavigationBar(
-        selectedItemColor: AppColor.white,
-        unselectedItemColor: AppColor.black,
-        showUnselectedLabels: true,
-        currentIndex: widget.currentIndex,
-        onTap: (index) {
-          widget.onTabChange(index);
-        },
+    return  BottomNavigationBar(
+      selectedItemColor: AppColor.white,
+      unselectedItemColor: AppColor.black,
+      showUnselectedLabels: true,
+      currentIndex: widget.currentIndex,
+      onTap: (index) {
+        widget.onTabChange(index);
+      },
 
-        items: [
-          BottomNavigationBarItem(
-            icon: navigationBarBgIcon(
-              0,
-              AppIcons.quranIcon,
-              widget.currentIndex,
-            ),
-            label: 'Quran',
+      items: [
+        BottomNavigationBarItem(
+          icon: navigationBarBgIcon(
+            0,
+            AppIcons.quranIcon,
+            widget.currentIndex,
           ),
-          BottomNavigationBarItem(
-            icon: navigationBarBgIcon(
-              1,
-              AppIcons.hadithIcon,
-              widget.currentIndex,
-            ),
-            label: 'Hadith',
+          label: 'Quran',
+        ),
+        BottomNavigationBarItem(
+          icon: navigationBarBgIcon(
+            1,
+            AppIcons.hadithIcon,
+            widget.currentIndex,
           ),
-          BottomNavigationBarItem(
-            icon: navigationBarBgIcon(
-              2,
-              AppIcons.sebhaIcon,
-              widget.currentIndex,
-            ),
-            label: 'Sebha',
+          label: 'Hadith',
+        ),
+        BottomNavigationBarItem(
+          icon: navigationBarBgIcon(
+            2,
+            AppIcons.sebhaIcon,
+            widget.currentIndex,
           ),
-          BottomNavigationBarItem(
-            icon: navigationBarBgIcon(
-              3,
-              AppIcons.radioIcon,
-              widget.currentIndex,
-            ),
-            label: 'Radio',
+          label: 'Sebha',
+        ),
+        BottomNavigationBarItem(
+          icon: navigationBarBgIcon(
+            3,
+            AppIcons.radioIcon,
+            widget.currentIndex,
           ),
-          BottomNavigationBarItem(
-            icon: navigationBarBgIcon(
-              4,
-              AppIcons.timeIcon,
-              widget.currentIndex,
-            ),
-            label: 'Time',
+          label: 'Radio',
+        ),
+        BottomNavigationBarItem(
+          icon: navigationBarBgIcon(
+            4,
+            AppIcons.timeIcon,
+            widget.currentIndex,
           ),
-        ],
-      ),
+          label: 'Time',
+        ),
+      ],
     );
   }
 }
