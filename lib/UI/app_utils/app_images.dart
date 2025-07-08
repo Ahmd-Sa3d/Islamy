@@ -12,6 +12,9 @@ class AppImages {
   static const String do3aIntroImage = 'assets/images/doaa_intro_image.png';
   static const String micIntroImage = 'assets/images/mic_intro_image.png';
   static const String recentlyOpenImage = 'assets/images/recently_open_image.png';
+  static const String quranMaskRight = 'assets/icons/quran_mask_right.png';
+  static const String quranMaskLeft = 'assets/icons/quran_mask_left.png';
+  static const String bottomMosqueImage = 'assets/icons/mosque_quran_details.png';
 
 
 
