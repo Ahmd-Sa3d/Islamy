@@ -4,7 +4,7 @@ import 'package:islamy/UI/app_utils/app_fonts.dart';
 
 class AppTheme {
   static ThemeData get darkThem {
-    return ThemeData.dark().copyWith(
+    return ThemeData.dark().copyWith(scaffoldBackgroundColor: AppColor.quranBgBlack,
       canvasColor: AppColor.gold,
       appBarTheme: AppBarTheme(
         iconTheme: IconThemeData(color: AppColor.gold),
