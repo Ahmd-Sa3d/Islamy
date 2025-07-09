@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islamy/UI/app_utils/app_color.dart';
 import 'package:islamy/UI/app_utils/app_fonts.dart';
 import 'package:islamy/UI/app_utils/app_images.dart';
 import 'package:islamy/UI/app_utils/quran_utils.dart';
@@ -17,9 +16,10 @@ class QuranDetailsTab extends StatefulWidget {
   State<QuranDetailsTab> createState() => _QuranDetailsTabState();
 }
 
+String suraContent = ' ';
+
 class _QuranDetailsTabState extends State<QuranDetailsTab> {
   List<String> verses = [];
-  int? selectedVersesIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,10 @@ class _QuranDetailsTabState extends State<QuranDetailsTab> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 8.0.h, horizontal: 20.w),
+              padding: EdgeInsets.symmetric(
+                vertical: 8.0.h,
+                horizontal: 20.w,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -51,29 +54,9 @@ class _QuranDetailsTabState extends State<QuranDetailsTab> {
               ),
             ),
             Expanded(
-              child:
-                  verses.isEmpty
-                      ? Center(child: CircularProgressIndicator())
-                      : ListView.separated(
-                        separatorBuilder:
-                            (context, index) => Divider(
-                              height: 8.h,
-                              color: AppColor.transParent,
-                            ),
-                        itemBuilder: (context, index) {
-                          return QuranContentStyle(
-                            isSelected: selectedVersesIndex == index,
-                            index: index + 1,
-                            suraContent: verses[index],
-                            onTap: () {
-                              setState(() {
-                                selectedVersesIndex = index;
-                              });
-                            },
-                          );
-                        },
-                        itemCount: verses.length,
-                      ),
+              child: verses.isEmpty
+                  ? Center(child: CircularProgressIndicator())
+                  : SingleChildScrollView(child: QuranContentStyle(suraContent: suraContent)),
             ),
             Image.asset(AppImages.bottomMosqueImage),
           ],
@@ -88,9 +71,10 @@ class _QuranDetailsTabState extends State<QuranDetailsTab> {
     );
     List<String> suraLines = fileContent.split('\n');
     for (int i = 0; i < suraLines.length; i++) {
-      verses = suraLines;
-      Future.delayed(Duration(seconds: 0));
-      setState(() {});
+      suraLines[i] += '[${i + 1}]';
     }
+    verses = suraLines;
+    suraContent = suraLines.join();
+    Future.delayed(Duration(seconds: 0), () => setState(() {}));
   }
 }
