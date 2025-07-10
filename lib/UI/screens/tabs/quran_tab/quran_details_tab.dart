@@ -15,7 +15,6 @@ class QuranDetailsTab extends StatefulWidget {
   @override
   State<QuranDetailsTab> createState() => _QuranDetailsTabState();
 }
-
 String suraContent = ' ';
 
 class _QuranDetailsTabState extends State<QuranDetailsTab> {
@@ -35,10 +34,7 @@ class _QuranDetailsTabState extends State<QuranDetailsTab> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(
-                vertical: 8.0.h,
-                horizontal: 20.w,
-              ),
+              padding: EdgeInsets.symmetric(vertical: 8.0.h, horizontal: 20.w),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -54,9 +50,12 @@ class _QuranDetailsTabState extends State<QuranDetailsTab> {
               ),
             ),
             Expanded(
-              child: verses.isEmpty
-                  ? Center(child: CircularProgressIndicator())
-                  : SingleChildScrollView(child: QuranContentStyle(suraContent: suraContent)),
+              child:
+                  verses.isEmpty
+                      ? Center(child: CircularProgressIndicator())
+                      : SingleChildScrollView(
+                        child: QuranContentStyle(suraContent: suraContent),
+                      ),
             ),
             Image.asset(AppImages.bottomMosqueImage),
           ],
