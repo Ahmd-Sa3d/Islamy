@@ -4,7 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islamy/UI/app_utils/app_fonts.dart';
 import 'package:islamy/UI/app_utils/app_images.dart';
 import 'package:islamy/UI/app_utils/quran_utils.dart';
+import 'package:islamy/UI/app_utils/shared_pref_utils/provider.dart';
 import 'package:islamy/UI/screens/tabs/quran_tab/quran_details/quran_content_style.dart';
+import 'package:provider/provider.dart';
 
 // ignore: must_be_immutable
 class QuranDetailsTab extends StatefulWidget {
@@ -19,9 +21,12 @@ String suraContent = ' ';
 
 class _QuranDetailsTabState extends State<QuranDetailsTab> {
   List<String> verses = [];
+  late MostRecentProvider provider;
 
   @override
   Widget build(BuildContext context) {
+    provider = Provider.of<MostRecentProvider>(context);
+
     int args = ModalRoute.of(context)?.settings.arguments as int;
     verses.isEmpty ? loadSuraFiles(args) : null;
     return Scaffold(
@@ -64,6 +69,12 @@ class _QuranDetailsTabState extends State<QuranDetailsTab> {
     );
   }
 
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    provider.reloadLastSurahOpen();
+  }
   void loadSuraFiles(int index) async {
     String fileContent = await rootBundle.loadString(
       'assets/Files/suras/${index + 1}.txt',
