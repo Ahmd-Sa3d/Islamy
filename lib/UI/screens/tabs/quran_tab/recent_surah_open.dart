@@ -42,6 +42,7 @@ class _RecentSurahOpenState extends State<RecentSurahOpen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Most Recently', style: AppFont.amiri16WhiteF700),
+            SizedBox(height: 10.0.h,),
             Row(
               children: [
                 Expanded(

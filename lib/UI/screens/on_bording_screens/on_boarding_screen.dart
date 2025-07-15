@@ -6,6 +6,7 @@ import 'package:islamy/UI/app_utils/app_color.dart';
 import 'package:islamy/UI/app_utils/app_images.dart';
 import 'package:islamy/UI/screens/on_bording_screens/on_boarding_data.dart';
 
+
 class OnBoardingScreen extends StatefulWidget {
   static final String routeName = '/intro_screen';
   const OnBoardingScreen({super.key});

@@ -57,6 +57,7 @@ class _QuranTabState extends State<QuranTab> {
 
           SizedBox(height: 10.h),
           RecentSurahOpen(),
+          SizedBox(height: 10.h,),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17),
             child: Align(
@@ -66,30 +67,27 @@ class _QuranTabState extends State<QuranTab> {
           ),
           SizedBox(height: 10.h),
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 17.0.w),
-              child: ListView.separated(
-                itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: () {
-                      provider.updateLastSuraIndex(suraIndexList[index]);
-                      Navigator.pushNamed(
-                        context,
-                        QuranDetailsTab.routeName,
-                        arguments: suraIndexList[index],
-                      );
-                    },
-                    child: SuraListName(
-                      suraNumber: index + 1,
-                      index: suraIndexList[index],
-                    ),
-                  );
-                },
-                separatorBuilder: (context, index) {
-                  return SizedBox(height: 10);
-                },
-                itemCount: suraIndexList.length,
-              ),
+            child: ListView.separated(
+              itemBuilder: (context, index) {
+                return InkWell(
+                  onTap: () {
+                    provider.updateLastSuraIndex(suraIndexList[index]);
+                    Navigator.pushNamed(
+                      context,
+                      QuranDetailsTab.routeName,
+                      arguments: suraIndexList[index],
+                    );
+                  },
+                  child: SuraListName(
+                    suraNumber: index + 1,
+                    index: suraIndexList[index],
+                  ),
+                );
+              },
+              separatorBuilder: (context, index) {
+                return SizedBox(height: 10);
+              },
+              itemCount: suraIndexList.length,
             ),
           ),
         ],
