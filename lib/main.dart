@@ -5,14 +5,13 @@ import 'package:islamy/UI/app_utils/shared_pref_utils/check_on_boarding_first_ti
 import 'package:islamy/UI/screens/home_screen.dart';
 import 'package:islamy/UI/screens/on_bording_screens/on_boarding_screen.dart';
 import 'package:islamy/UI/screens/splash_screen.dart';
-import 'package:islamy/UI/screens/tabs/quran_tab/quran_details_tab.dart';
+import 'package:islamy/UI/screens/tabs/quran_tab/quran_details/quran_details_tab.dart';
 import 'package:provider/provider.dart';
 import 'UI/app_utils/shared_pref_utils/provider.dart';
 
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
   final isOnboardingOpened = await CheckOnBoardingFirstTimeOpen.isOnboardingOpened();
-
   runApp(
     ChangeNotifierProvider(
       create: (context) => MostRecentProvider(),
