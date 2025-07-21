@@ -15,8 +15,8 @@ class AppImages {
   static const String quranMaskRight = 'assets/icons/quran_mask_right.png';
   static const String quranMaskLeft = 'assets/icons/quran_mask_left.png';
   static const String bottomMosqueImage = 'assets/icons/mosque_quran_details.png';
-
-
-
+    static const String hadithCardRightLeftCorner = 'assets/images/right_left_hadith_Corner.png';
+  static const String hadithCardBG = 'assets/images/hadithCardBG.png';
+  static const String sebhaHead = 'assets/images/sebhaHead.png';
+  static const String sebhaBody = 'assets/images/SebhaBody.png';
 }
-

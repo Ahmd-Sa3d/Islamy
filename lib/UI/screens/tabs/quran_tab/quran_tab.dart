@@ -5,7 +5,7 @@ import 'package:islamy/UI/app_utils/app_fonts.dart';
 import 'package:islamy/UI/app_utils/app_icons.dart';
 import 'package:islamy/UI/app_utils/quran_utils.dart';
 import 'package:islamy/UI/app_utils/shared_pref_utils/provider.dart';
-import 'package:islamy/UI/screens/tabs/quran_tab/quran_details_tab.dart';
+import 'package:islamy/UI/screens/tabs/quran_tab/quran_details/quran_details_tab.dart';
 import 'package:islamy/UI/screens/tabs/quran_tab/recent_surah_open.dart';
 import 'package:islamy/UI/widget/sura_list_name.dart';
 import 'package:provider/provider.dart';

@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
           body: SafeArea(
             child: Column(
               children: [
-                Image.asset(AppImages.onBoardingMosque),
+                Center(child: Image.asset(AppImages.onBoardingMosque)),
                 tabsList[selectedIndex],
               ],
             ),

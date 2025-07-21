@@ -1,6 +1,7 @@
+import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class CheckOnBoardingFirstTimeOpen {
+class CheckOnBoardingFirstTimeOpen extends ChangeNotifier {
   static const String checkOnboardingKey = 'checkOnBoarding';
 
   static Future<bool> isOnboardingOpened() async {

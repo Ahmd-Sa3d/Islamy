@@ -4,8 +4,8 @@ class OnBoardingData {
   final String image;
   final String title;
   final String? description;
+  OnBoardingData({required this.image,required this.title, this.description});
 
-  OnBoardingData({required this.image, required this.title, this.description});
 
  static List<OnBoardingData> introData = [
     OnBoardingData(image: AppImages.welcomeWord, title: 'Welcome To Islmi App'),
@@ -33,3 +33,4 @@ class OnBoardingData {
     ),
   ];
 }
+
